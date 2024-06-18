@@ -26,5 +26,6 @@ def read_topics(
     limit: int = 100, 
     db: Session = Depends(get_db)
 ):
+    print(skip)
     topics = crud.topic.get(db, skip=skip, limit=limit)
     return topics
