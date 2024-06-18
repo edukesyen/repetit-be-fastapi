@@ -58,4 +58,4 @@ COPY ./.env ./.env
 
 EXPOSE 8000
 # ENTRYPOINT ["./boot.sh"]
-CMD ["exec", "gunicorn", "app.main:app", "-w", "1", "-b", "0.0.0.0", "--worker-class", "uvicorn.workers.UvicornWorker"]
+CMD ["gunicorn", "app.main:app", "-w", "1", "-b", "0.0.0.0", "--worker-class", "uvicorn.workers.UvicornWorker"]
