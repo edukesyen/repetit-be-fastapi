@@ -1,0 +1,23 @@
+[project]
+name = "repetit-be-fastapi"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Almaas Izdihar", email = "almaasizdihar@gmail.com"},
+]
+dependencies = [
+    "fastapi>=0.111.0",
+    "sqlalchemy>=2.0.30",
+    "pydantic>=2.7.4",
+    "pydantic-settings>=2.3.3",
+    "psycopg[binary]<4.0.0,>=3.1.13",
+    "alembic>=1.13.1",
+    "sentry-sdk>=2.5.1",
+]
+requires-python = "==3.10.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
