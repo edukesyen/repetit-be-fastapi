@@ -1,7 +1,7 @@
 from sqlalchemy import Boolean, Column, Integer, String, Enum
 from sqlalchemy.orm import relationship
 
-from app.models.base import Base
+from app.core.db import Base
 from app.utils.enums import UserRole
 
 
@@ -16,4 +16,4 @@ class User(Base):
     is_active = Column(Boolean, default=True)
     role = Column(Enum(UserRole)) # "STUDENT" or "MENTOR"
 
-    topic = relationship("Topic", back_populates="user")
+    topics = relationship("Topic", back_populates="user")

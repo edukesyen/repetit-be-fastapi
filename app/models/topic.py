@@ -1,7 +1,7 @@
 from sqlalchemy import ForeignKey, Column, Integer, String
 from sqlalchemy.orm import relationship
 
-from app.models.base import Base
+from app.core.db import Base
 
 
 class Topic(Base):

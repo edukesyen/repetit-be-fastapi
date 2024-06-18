@@ -1,4 +1,4 @@
-from .base import Base
+from app.core.db import Base
 
-from .user import User
-from .topic import Topic
+from app.models.user import User
+from app.models.topic import Topic
