@@ -17,3 +17,11 @@
 7. upgrade migration to latest version `alembic upgrade head`
 
 8. run the development server `uvicorn app.main:app --reload`
+
+## Upload Container Registry
+
+```
+gcloud auth configure-docker asia-southeast1-docker.pkg.dev
+docker tag repetit-be:latest asia-southeast1-docker.pkg.dev/si-rene-app/repetit-be/repetit-be:latest
+docker push asia-southeast1-docker.pkg.dev/si-rene-app/repetit-be/repetit-be:latest
+```
