@@ -12,3 +12,4 @@ class Topic(Base):
     user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
 
     user = relationship("User", back_populates="topics")
+    flashcards = relationship("Flashcard", back_populates="topic")

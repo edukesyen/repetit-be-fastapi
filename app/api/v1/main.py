@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.api.v1.routes import test, topics, users
+from app.api.v1.routes import test, topics, users, flashcards
 
 api_router = APIRouter()
 
@@ -8,6 +8,7 @@ api_router.include_router(test.router, prefix="/test", tags=["labs"])
 
 api_router.include_router(users.router, prefix="/users", tags=["users"])
 api_router.include_router(topics.router, prefix="/topics", tags=["topics"])
+api_router.include_router(flashcards.router, prefix="/flashcards", tags=["flashcards"])
 
 # api_router.include_router(login.router, tags=["login"])
 # api_router.include_router(users.router, prefix="/users", tags=["users"])

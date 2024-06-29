@@ -9,3 +9,9 @@ from .topic import (
     TopicBase,
     TopicCreate
 )
+
+from .flashcard import (
+  Flashcard,
+  FlashcardBase,
+  FlashcardCreate
+)
